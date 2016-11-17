@@ -1,0 +1,16 @@
+﻿<Properties StartupConfiguration="{BB43B44F-AF8C-4911-9081-7C3E78BA9EE4}|Default">
+  <MonoDevelop.Ide.ItemProperties.TunnelVision AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.AVD_for_Nexus_4_by_Google_API_24" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="TunnelVision\BrowseActivity.cs">
+    <Files>
+      <File FileName="TunnelVision\Dev_LocationMaker.cs" Line="1" Column="14" />
+      <File FileName="TunnelVision\Location.cs" Line="40" Column="80" />
+      <File FileName="TunnelVision\BrowseActivity.cs" Line="32" Column="73" />
+      <File FileName="TunnelVision\Properties\AndroidManifest.xml" Line="3" Column="41" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+</Properties>
