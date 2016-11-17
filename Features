@@ -1,0 +1,27 @@
+List of features we plan to incorporate into the project, and whos assigned to do each
+
+UI------------------------------------------------------------------
+4 Views
+  Map View
+    Picture of the Map with route and icons of POI
+      Multiple maps covering entire tunnel system
+    
+  Detailed Map View
+    Details on the POI along the route
+      Distances point to point, and how far they divert from path
+    
+  Options View
+    Options for the App
+    
+  Selection View
+    Path selection options, to and from points
+      Path criteria, shortest or near bathroom, or near cafeteria
+    
+Logic----------------------------------------------------------------
+  Pathfinding algorithm
+    Shortest path, path with specified POIs
+    
+Storage--------------------------------------------------------------
+  JSON files
+    FROM: Buidling -> Room -> Generate coordinates
+    TO: Building -> Room -> Generate coordinates
