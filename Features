@@ -16,6 +16,7 @@ UI------------------------------------------------------------------
   Selection View
     Path selection options, to and from points
       Path criteria, shortest or near bathroom, or near cafeteria
+      Whether or not it requires an elevator
     
 Logic----------------------------------------------------------------
   Pathfinding algorithm
