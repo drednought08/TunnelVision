@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 
 namespace TunnelVision
 {
@@ -22,15 +23,25 @@ namespace TunnelVision
 		};
 		Transition transition {get; set;}
 		string buildingFloor {get; set;}
-		double xPos {get; set;}
-		double yPos {get; set;}
+		public int xPos {get; set;}
+		public int yPos {get; set;}
 
         //===============================================================================================
 
+        [JsonConstructor]
         public Location()
+            //Different constructor so the Json deserialization doesn't cause an infinite loop of creating Locations
+        {
+
+        }
+
+        public Location(int x, int y)
 		{
+            xPos = x;
+            yPos = y;
 			connectionNames = new string[8];
 			connectionDists = new double[8];
+            LocationManagerInstance.manager.AddLocation(this);
 		}
 
         //===============================================================================================

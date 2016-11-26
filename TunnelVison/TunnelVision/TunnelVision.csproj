@@ -51,9 +51,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BrowseActivity.cs" />
+    <Compile Include="LocationManager.cs" />
+    <Compile Include="Pathfinder.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Dev_LocationMaker.cs" />
     <Compile Include="Location.cs" />
   </ItemGroup>
   <ItemGroup>

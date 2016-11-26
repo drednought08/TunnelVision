@@ -10,7 +10,7 @@ namespace TunnelVision
     [Activity(Label = "Tunnel Vision", MainLauncher = true, Icon = "@mipmap/icon")]
 	public class BrowseActivity : Activity
 	{
-        ImageView displayedMap;
+        public ImageView displayedMap;
         ScaleGestureDetector scaleGestureDetector;
         Matrix matrix = new Matrix();
 
