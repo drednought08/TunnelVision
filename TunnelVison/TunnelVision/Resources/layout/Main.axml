@@ -1,16 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:minWidth="25px"
-    android:minHeight="25px">
-    <ImageView
-        android:src="@drawable/map_mac1"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="550.0dp"
-        android:id="@+id/displayedMap"
-        android:layout_marginBottom="0.5dp"
-        android:scaleType="matrix"
-        android:scrollbars="vertical" />
-</LinearLayout>
+        android:layout_height="match_parent"
+        android:id="@+id/main_content"
+        android:layout_below="@id/toolbar">
+        <TextView
+            android:layout_margin="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:singleLine="true" />
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/UWGB_logo"
+            android:clickable="true"
+            android:layout_gravity="center" />
+        <Button
+            android:id="@+id/btnGetRoute"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="  Get Route  "
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:textStyle="normal"
+            android:background="#ff357f41"
+            android:typeface="normal"
+            android:textColor="#ffffffff"
+            android:shadowRadius="1" />
+        <Button
+            android:id="@+id/btnViewMaps"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="  View Maps  "
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:textStyle="normal"
+            android:background="#ff357f41"
+            android:typeface="normal"
+            android:textColor="#ffffffff"
+            android:shadowColor="#ff0a0a0a"
+            android:shadowRadius="5" />
+    </LinearLayout>
+</RelativeLayout>

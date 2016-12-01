@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Drawing;
-using System.Windows.Forms;
 using TunnelVision;
 
 
 namespace Dev_LocationMaker
 {
-	public class LocationMaker
+    public class LocationMaker
 	{
         //private string storageDir = LocationManager.storageDir;
 
