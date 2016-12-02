@@ -1,11 +1,22 @@
-﻿using Android.App;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+using Android.App;
+using Android.Content;
 using Android.OS;
+using Android.Runtime;
+using Android.Views;
+using Android.Widget;
 using Android.Webkit;
+using Android.Support.V7.App;
+using Android.Util;
 
 namespace TunnelVision
 {
     [Activity(Label = "Tunnel Vision")]
-    public class BrowseActivity : Activity
+    public class BrowseActivity : AppCompatActivity
     {
         WebView displayedMap;
         int width;
@@ -14,24 +25,27 @@ namespace TunnelVision
         string defaultMap = "TestRainbow.png";
         string currentMap = "";
 
-        public void onCreate(Bundle savedInstanceState)
+        protected override void OnCreate(Bundle bundle)
         {
-            base.OnCreate(savedInstanceState);
+            base.OnCreate(bundle);
 
+            // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Browse);
 
-            width = Resources.DisplayMetrics.WidthPixels;
+            width = (int)(Resources.DisplayMetrics.WidthPixels / Resources.DisplayMetrics.Density);
+
+            var toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
+            SetSupportActionBar(toolbar);
+            SupportActionBar.Title = "View Map";
+            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
+            SupportActionBar.SetHomeButtonEnabled(true);
+
             displayedMap = FindViewById<WebView>(Resource.Id.displayedMap);
-            displayedMap.Invalidate();
-            //SetDisplaySettings();
-            //displayedMap.SetLayerType(LayerType.Software, null);
-            displayedMap.LoadUrl("http://www.google.com");
-            displayedMap.Invalidate();
+            displayedMap.SetWebViewClient(new WebViewClient()); // stops request going to Web Browser
 
-            //ChangeMap(defaultMap);
-
-            string toast = string.Format("Displayed URL is: {0}", displayedMap.Url);
-            Android.Widget.Toast.MakeText(this, toast, Android.Widget.ToastLength.Long).Show();
+            SetDisplaySettings();
+            
+            ChangeMap("TestRainbow.png");
         }
 
         //===============================================================================================
@@ -47,84 +61,27 @@ namespace TunnelVision
 
         public void ChangeMap(string mapName)
         {
-            //data = "<html><head><title>Map</title><meta name=\"viewport\"\"content=\"width=" + width + ", initial-scale=0.65 \" /></head>";
-            //data += "<body><center><img width=\"" + width + "\" src=\"" + mapPrefix + mapName + "\" /></center></body></html>";
-            data = "<html><head></head><body><img src=\"" + mapPrefix + mapName + "\"/></body></html>";
+            data = "<html><head><title>Map</title><meta name=\"viewport\"\"content=\"width=" + width + ", initial-scale=0.65 \" /></head>";
+            //data += "<body><center><img width=\"" + width + "\" src=\"" + mapPrefix + mapName + "\" /></center></body></html>";       //Different version of below line
+            data += "<body><center><img src=\"" + mapPrefix + mapName + "\" /></center></body></html>";
 
+            //displayedMap.LoadUrl("http://google.com");
             //displayedMap.LoadUrl(mapPrefix + mapName);
-            //displayedMap.LoadData(data, "text/html", "UTF-8");
             //displayedMap.LoadUrl("file:///android_asset/Maps/TestRainbow.png");
-            //displayedMap.LoadData(data, "text/html", null);
-            // displayedMap.LoadDataWithBaseURL(null, "<style>img{display: inline;height: auto;max-width: 100%;}</style>" + .getContent(), "text/html", "UTF-8", null);
-
+            displayedMap.LoadDataWithBaseURL(null, data, "text/html", "utf-8", null);
             
             currentMap = mapName;
 
         }
 
+        //===============================================================================================
 
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            if (item.ItemId == Android.Resource.Id.Home)
+                Finish();
 
-
-            //ImageView version. Not working
-            /*
-            public ImageView displayedMap;
-            ScaleGestureDetector scaleGestureDetector;
-            Matrix matrix = new Matrix();
-
-            protected override void OnCreate(Bundle savedInstanceState)
-            {
-                base.OnCreate(savedInstanceState);
-
-                // Set our view from the "main" layout resource
-                SetContentView(Resource.Layout.Main);
-
-                // Get our button from the layout resource,
-                // and attach an event to it
-                displayedMap = FindViewById<ImageView>(Resource.Id.displayedMap);
-                displayedMap.SetImageResource(Resource.Drawable.TestRainbow);	//Default done in the displayedMap's properties. This is for testing
-                scaleGestureDetector = new ScaleGestureDetector(this, new ScaleListener(this));
-            }
-
-            //===============================================================================================
-            #region Image scaling implementation //Testing. Currently zooms in on startup and doesn't pan
-
-            public override bool OnTouchEvent(MotionEvent e)
-            {
-                scaleGestureDetector.OnTouchEvent(e);
-                return true;
-            }
-
-            //===============================================================================================
-
-            private class ScaleListener : ScaleGestureDetector.SimpleOnScaleGestureListener
-            {
-                private BrowseActivity browseActivity;
-
-                public ScaleListener(BrowseActivity browseActivity)
-                {
-                    this.browseActivity = browseActivity;
-                }
-
-                public override bool OnScale(ScaleGestureDetector detector)
-                {
-                    float scaleFactor = detector.ScaleFactor;
-                    scaleFactor = Math.Max(0.1f, Math.Min(scaleFactor, 5.0f));
-
-                    browseActivity.matrix.SetScale(scaleFactor, scaleFactor);
-                    return true;
-                }
-            }
+            return base.OnOptionsItemSelected(item);
         }
-
-        #endregion
-
-        //===============================================================================================
-
-
-
-        //===============================================================================================
-        */
-
     }
 }
-

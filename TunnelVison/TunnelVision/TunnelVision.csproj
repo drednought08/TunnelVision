@@ -105,7 +105,9 @@
     </None>
     <None Include="Assets\AboutAssets.txt" />
     <AndroidResource Include="Resources\layout\buildingList.axml" />
-    <AndroidResource Include="Resources\layout\getRoute.axml" />
+    <AndroidResource Include="Resources\layout\getRoute.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
     <AndroidResource Include="Resources\layout\Main.axml">
       <SubType>Designer</SubType>
     </AndroidResource>

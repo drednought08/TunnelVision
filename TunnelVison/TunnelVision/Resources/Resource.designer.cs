@@ -1712,8 +1712,8 @@ namespace TunnelVision
 			// aapt resource value: 0x7f0b000c
 			public const int disableHome = 2131427340;
 			
-			// aapt resource value: 0x7f0b0054
-			public const int displayedMap = 2131427412;
+			// aapt resource value: 0x7f0b0055
+			public const int displayedMap = 2131427413;
 			
 			// aapt resource value: 0x7f0b0047
 			public const int edit_query = 2131427399;
@@ -1916,8 +1916,8 @@ namespace TunnelVision
 			// aapt resource value: 0x7f0b0032
 			public const int title_template = 2131427378;
 			
-			// aapt resource value: 0x7f0b0055
-			public const int toolbar = 2131427413;
+			// aapt resource value: 0x7f0b0054
+			public const int toolbar = 2131427412;
 			
 			// aapt resource value: 0x7f0b0023
 			public const int top = 2131427363;
