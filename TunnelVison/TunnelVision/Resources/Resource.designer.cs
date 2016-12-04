@@ -809,35 +809,47 @@ namespace TunnelVision
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f0a003a
-			public const int abc_background_cache_hint_selector_material_dark = 2131361850;
+			// aapt resource value: 0x7f0a003d
+			public const int aBlack = 2131361853;
 			
 			// aapt resource value: 0x7f0a003b
-			public const int abc_background_cache_hint_selector_material_light = 2131361851;
+			public const int aBlue = 2131361851;
 			
 			// aapt resource value: 0x7f0a003c
-			public const int abc_btn_colored_borderless_text_material = 2131361852;
+			public const int aGreen = 2131361852;
 			
-			// aapt resource value: 0x7f0a003d
-			public const int abc_color_highlight_material = 2131361853;
+			// aapt resource value: 0x7f0a003a
+			public const int aRed = 2131361850;
+			
+			// aapt resource value: 0x7f0a003e
+			public const int abc_background_cache_hint_selector_material_dark = 2131361854;
+			
+			// aapt resource value: 0x7f0a003f
+			public const int abc_background_cache_hint_selector_material_light = 2131361855;
+			
+			// aapt resource value: 0x7f0a0040
+			public const int abc_btn_colored_borderless_text_material = 2131361856;
+			
+			// aapt resource value: 0x7f0a0041
+			public const int abc_color_highlight_material = 2131361857;
 			
 			// aapt resource value: 0x7f0a0000
 			public const int abc_input_method_navigation_guard = 2131361792;
 			
-			// aapt resource value: 0x7f0a003e
-			public const int abc_primary_text_disable_only_material_dark = 2131361854;
-			
-			// aapt resource value: 0x7f0a003f
-			public const int abc_primary_text_disable_only_material_light = 2131361855;
-			
-			// aapt resource value: 0x7f0a0040
-			public const int abc_primary_text_material_dark = 2131361856;
-			
-			// aapt resource value: 0x7f0a0041
-			public const int abc_primary_text_material_light = 2131361857;
-			
 			// aapt resource value: 0x7f0a0042
-			public const int abc_search_url_text = 2131361858;
+			public const int abc_primary_text_disable_only_material_dark = 2131361858;
+			
+			// aapt resource value: 0x7f0a0043
+			public const int abc_primary_text_disable_only_material_light = 2131361859;
+			
+			// aapt resource value: 0x7f0a0044
+			public const int abc_primary_text_material_dark = 2131361860;
+			
+			// aapt resource value: 0x7f0a0045
+			public const int abc_primary_text_material_light = 2131361861;
+			
+			// aapt resource value: 0x7f0a0046
+			public const int abc_search_url_text = 2131361862;
 			
 			// aapt resource value: 0x7f0a0001
 			public const int abc_search_url_text_normal = 2131361793;
@@ -848,32 +860,32 @@ namespace TunnelVision
 			// aapt resource value: 0x7f0a0003
 			public const int abc_search_url_text_selected = 2131361795;
 			
-			// aapt resource value: 0x7f0a0043
-			public const int abc_secondary_text_material_dark = 2131361859;
-			
-			// aapt resource value: 0x7f0a0044
-			public const int abc_secondary_text_material_light = 2131361860;
-			
-			// aapt resource value: 0x7f0a0045
-			public const int abc_tint_btn_checkable = 2131361861;
-			
-			// aapt resource value: 0x7f0a0046
-			public const int abc_tint_default = 2131361862;
-			
 			// aapt resource value: 0x7f0a0047
-			public const int abc_tint_edittext = 2131361863;
+			public const int abc_secondary_text_material_dark = 2131361863;
 			
 			// aapt resource value: 0x7f0a0048
-			public const int abc_tint_seek_thumb = 2131361864;
+			public const int abc_secondary_text_material_light = 2131361864;
 			
 			// aapt resource value: 0x7f0a0049
-			public const int abc_tint_spinner = 2131361865;
+			public const int abc_tint_btn_checkable = 2131361865;
 			
 			// aapt resource value: 0x7f0a004a
-			public const int abc_tint_switch_thumb = 2131361866;
+			public const int abc_tint_default = 2131361866;
 			
 			// aapt resource value: 0x7f0a004b
-			public const int abc_tint_switch_track = 2131361867;
+			public const int abc_tint_edittext = 2131361867;
+			
+			// aapt resource value: 0x7f0a004c
+			public const int abc_tint_seek_thumb = 2131361868;
+			
+			// aapt resource value: 0x7f0a004d
+			public const int abc_tint_spinner = 2131361869;
+			
+			// aapt resource value: 0x7f0a004e
+			public const int abc_tint_switch_thumb = 2131361870;
+			
+			// aapt resource value: 0x7f0a004f
+			public const int abc_tint_switch_track = 2131361871;
 			
 			// aapt resource value: 0x7f0a0004
 			public const int accent_material_dark = 2131361796;
@@ -1031,11 +1043,11 @@ namespace TunnelVision
 			// aapt resource value: 0x7f0a0037
 			public const int switch_thumb_disabled_material_light = 2131361847;
 			
-			// aapt resource value: 0x7f0a004c
-			public const int switch_thumb_material_dark = 2131361868;
+			// aapt resource value: 0x7f0a0050
+			public const int switch_thumb_material_dark = 2131361872;
 			
-			// aapt resource value: 0x7f0a004d
-			public const int switch_thumb_material_light = 2131361869;
+			// aapt resource value: 0x7f0a0051
+			public const int switch_thumb_material_light = 2131361873;
 			
 			// aapt resource value: 0x7f0a0038
 			public const int switch_thumb_normal_material_dark = 2131361848;
@@ -1670,11 +1682,47 @@ namespace TunnelVision
 			// aapt resource value: 0x7f0b0022
 			public const int bottom = 2131427362;
 			
+			// aapt resource value: 0x7f0b0075
+			public const int btnButtonBlack = 2131427445;
+			
+			// aapt resource value: 0x7f0b0073
+			public const int btnButtonBlue = 2131427443;
+			
+			// aapt resource value: 0x7f0b0074
+			public const int btnButtonGreen = 2131427444;
+			
+			// aapt resource value: 0x7f0b0072
+			public const int btnButtonRed = 2131427442;
+			
 			// aapt resource value: 0x7f0b005d
 			public const int btnGetRoute = 2131427421;
 			
 			// aapt resource value: 0x7f0b005b
 			public const int btnSubmit = 2131427419;
+			
+			// aapt resource value: 0x7f0b007a
+			public const int btnTextBlack = 2131427450;
+			
+			// aapt resource value: 0x7f0b0078
+			public const int btnTextBlue = 2131427448;
+			
+			// aapt resource value: 0x7f0b0077
+			public const int btnTextRed = 2131427447;
+			
+			// aapt resource value: 0x7f0b0079
+			public const int btnTextWhite = 2131427449;
+			
+			// aapt resource value: 0x7f0b0070
+			public const int btnToolbarBlack = 2131427440;
+			
+			// aapt resource value: 0x7f0b006e
+			public const int btnToolbarBlue = 2131427438;
+			
+			// aapt resource value: 0x7f0b006f
+			public const int btnToolbarGreen = 2131427439;
+			
+			// aapt resource value: 0x7f0b006d
+			public const int btnToolbarRed = 2131427437;
 			
 			// aapt resource value: 0x7f0b005e
 			public const int btnViewMaps = 2131427422;
@@ -1766,11 +1814,11 @@ namespace TunnelVision
 			// aapt resource value: 0x7f0b0062
 			public const int media_actions = 2131427426;
 			
-			// aapt resource value: 0x7f0b006d
-			public const int menu_settings = 2131427437;
+			// aapt resource value: 0x7f0b007c
+			public const int menu_settings = 2131427452;
 			
-			// aapt resource value: 0x7f0b006c
-			public const int menu_share = 2131427436;
+			// aapt resource value: 0x7f0b007b
+			public const int menu_share = 2131427451;
 			
 			// aapt resource value: 0x7f0b001c
 			public const int middle = 2131427356;
@@ -1906,6 +1954,15 @@ namespace TunnelVision
 			
 			// aapt resource value: 0x7f0b0056
 			public const int textView1 = 2131427414;
+			
+			// aapt resource value: 0x7f0b0071
+			public const int textViewButtonColor = 2131427441;
+			
+			// aapt resource value: 0x7f0b006c
+			public const int textViewColor = 2131427436;
+			
+			// aapt resource value: 0x7f0b0076
+			public const int textViewTextColor = 2131427446;
 			
 			// aapt resource value: 0x7f0b0065
 			public const int time = 2131427429;
@@ -2102,10 +2159,13 @@ namespace TunnelVision
 			public const int select_dialog_singlechoice_material = 2130968617;
 			
 			// aapt resource value: 0x7f04002a
-			public const int support_simple_spinner_dropdown_item = 2130968618;
+			public const int settings = 2130968618;
 			
 			// aapt resource value: 0x7f04002b
-			public const int toolbar = 2130968619;
+			public const int support_simple_spinner_dropdown_item = 2130968619;
+			
+			// aapt resource value: 0x7f04002c
+			public const int toolbar = 2130968620;
 			
 			static Layout()
 			{
@@ -2746,6 +2806,15 @@ namespace TunnelVision
 			
 			// aapt resource value: 0x7f08014c
 			public const int MyTheme_Base = 2131231052;
+			
+			// aapt resource value: 0x7f08014f
+			public const int MyTheme_Base_BlackBar = 2131231055;
+			
+			// aapt resource value: 0x7f08014e
+			public const int MyTheme_Base_BlueBar = 2131231054;
+			
+			// aapt resource value: 0x7f08014d
+			public const int MyTheme_Base_RedBar = 2131231053;
 			
 			// aapt resource value: 0x7f080019
 			public const int Platform_AppCompat = 2131230745;
