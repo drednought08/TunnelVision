@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace TunnelVisionPathfinder
+namespace TunnelVision
 {
     public class Pathfinder
     {

@@ -35,13 +35,6 @@ namespace TunnelVision
             {
                 StartActivity(typeof(BrowseActivity));      //Possible problem(s) with this line. Debugger can't step into it for me. "Frame not in module"
             };
-
-            
-
-            //FindViewById<Button>(Resource.Id.btnSubmit).Click += (sender, e) =>
-            //{
-            //StartActivity(typeof(LocationActivity));
-            //};
         }
 
 		/// <Docs>The options menu in which you place your items.</Docs>
@@ -56,14 +49,6 @@ namespace TunnelVision
 			return base.OnCreateOptionsMenu (menu);
 		}
 
-        /*
-		public override bool OnOptionsItemSelected (IMenuItem item)
-		{	
-			Toast.MakeText(this, "Top ActionBar pressed: " + item.TitleFormatted, ToastLength.Short).Show();
-			return base.OnOptionsItemSelected (item);
-		}
-        */
-
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
             switch (item.ItemId)
@@ -72,7 +57,6 @@ namespace TunnelVision
                     StartActivity(typeof(SettingsActivity));
                     return true;
                 case Resource.Id.menu_share:
-                    //
                     return true;
             }
             return base.OnOptionsItemSelected(item);

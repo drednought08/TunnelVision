@@ -1,156 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal">
     <include
         android:id="@+id/toolbar"
         layout="@layout/toolbar" />
     <TextView
-        android:text="Menu color"
+        android:text="Menu Color"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textViewColor"
         android:gravity="center"
         android:layout_marginTop="80dp" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewColor"
+        android:id="@+id/linearLayout1" />
     <Button
         android:id="@+id/btnToolbarRed"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
         android:text=""
-        android:layout_gravity="center"
-        android:layout_marginTop="35dp"
-        android:layout_below="@id/textViewColor"
         android:background="#ff9c1818"
-        android:layout_marginLeft="67.5dp" />
-    <Button
-        android:id="@+id/btnToolbarBlue"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:text=""
-        android:layout_gravity="center"
-        android:layout_marginTop="35dp"
-        android:layout_below="@id/textViewColor"
-        android:background="#ff1f1f99"
-        android:layout_centerInParent="false"
-        android:layout_marginLeft="135dp" />
+        android:layout_below="@id/linearLayout1"
+        android:layout_marginRight="33.75dp"
+        android:layout_toLeftOf="@+id/btnToolbarBlue" />
+    <View
+        android:id="@+id/middle"
+        android:layout_width="33.75dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/linearLayout1"
+        android:layout_centerInParent="true" />
     <Button
         android:id="@+id/btnToolbarGreen"
+        android:text=""
+        android:background="#ff357f41"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:text=""
-        android:layout_gravity="center"
-        android:layout_marginTop="35dp"
-        android:layout_below="@id/textViewColor"
-        android:background="#ff357f41"
-        android:layout_marginLeft="202.5dp" />
+        android:layout_toRightOf="@id/middle"
+        android:layout_below="@id/linearLayout1" />
     <Button
         android:id="@+id/btnToolbarBlack"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
         android:text=""
-        android:layout_gravity="center"
-        android:layout_marginTop="35dp"
-        android:layout_below="@id/textViewColor"
         android:background="#ff000000"
-        android:layout_marginLeft="270dp" />
-    <TextView
-        android:text="Button color"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textViewButtonColor"
-        android:gravity="center"
-        android:layout_marginTop="250dp" />
-    <Button
-        android:id="@+id/btnButtonRed"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:text=""
-        android:layout_gravity="center"
-        android:layout_marginTop="35dp"
-        android:layout_below="@id/textViewButtonColor"
-        android:background="#ff9c1818"
-        android:layout_marginLeft="67.5dp" />
+        android:layout_toRightOf="@id/btnToolbarGreen"
+        android:layout_below="@id/linearLayout1"
+        android:layout_marginLeft="33.75dp" />
     <Button
-        android:id="@+id/btnButtonBlue"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
+        android:id="@+id/btnToolbarBlue"
         android:text=""
-        android:layout_gravity="center"
-        android:layout_marginTop="35dp"
-        android:layout_below="@id/textViewButtonColor"
         android:background="#ff1f1f99"
-        android:layout_centerInParent="false"
-        android:layout_marginLeft="135dp" />
-    <Button
-        android:id="@+id/btnButtonGreen"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:text=""
-        android:layout_gravity="center"
-        android:layout_marginTop="35dp"
-        android:layout_below="@id/textViewButtonColor"
-        android:background="#ff357f41"
-        android:layout_marginLeft="202.5dp" />
-    <Button
-        android:id="@+id/btnButtonBlack"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:layout_gravity="center"
-        android:layout_marginTop="35dp"
-        android:layout_below="@id/textViewButtonColor"
-        android:background="#ff000000"
-        android:layout_marginLeft="270dp" />
-    <TextView
-        android:text="Text color"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textViewTextColor"
-        android:gravity="center"
-        android:layout_marginTop="420dp" />
-    <Button
-        android:id="@+id/btnTextRed"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:layout_gravity="center"
-        android:layout_marginTop="35dp"
-        android:layout_below="@id/textViewTextColor"
-        android:background="#ff9c1818"
-        android:layout_marginLeft="67.5dp" />
-    <Button
-        android:id="@+id/btnTextBlue"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:layout_gravity="center"
-        android:layout_marginTop="35dp"
-        android:layout_below="@id/textViewTextColor"
-        android:background="#ff1f1f99"
-        android:layout_centerInParent="false"
-        android:layout_marginLeft="135dp" />
-    <Button
-        android:id="@+id/btnTextWhite"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:layout_gravity="center"
-        android:layout_marginTop="35dp"
-        android:layout_below="@id/textViewTextColor"
-        android:background="#ffffffff"
-        android:layout_marginLeft="202.5dp" />
-    <Button
-        android:id="@+id/btnTextBlack"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:layout_gravity="center"
-        android:layout_marginTop="35dp"
-        android:layout_below="@id/textViewTextColor"
-        android:background="#ff000000"
-        android:layout_marginLeft="270dp" />
+        android:layout_below="@id/linearLayout1"
+        android:layout_toLeftOf="@id/middle" />
 </RelativeLayout>

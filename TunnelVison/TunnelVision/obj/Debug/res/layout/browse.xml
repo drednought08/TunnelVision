@@ -1,1 +1,14 @@
-<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:minWidth="25px" android:minHeight="25px" xmlns:android="http://schemas.android.com/apk/res/android"><include android:id="@+id/toolbar" layout="@layout/toolbar" /><android.webkit.WebView android:layout_width="match_parent" android:layout_height="match_parent" android:id="@+id/displayedMap" /></LinearLayout>
+<RelativeLayout p1:minWidth="25px" p1:minHeight="25px" p1:layout_width="match_parent" p1:layout_height="match_parent" p1:id="@+id/relativeLayout1" xmlns:p1="http://schemas.android.com/apk/res/android"><include p1:id="@+id/toolbar" layout="@layout/toolbar" /><LinearLayout p1:orientation="vertical" p1:layout_width="match_parent" p1:layout_height="wrap_content" p1:id="@+id/linearLayout1" p1:layout_alignParentBottom="true"><Button p1:text="Change Map" p1:layout_width="match_parent" p1:layout_height="match_parent" p1:background="#ff357f41" p1:id="@+id/changeBtn" p1:textColor="#FFFFFFFF" p1:layout_weight="1" p1:layout_gravity="center_horizontal" /><!--
+        <Button
+            p1:text="Previous"
+            p1:layout_width="wrap_content"
+            p1:layout_height="match_parent"
+            p1:id="@+id/prevBtn"
+            p1:layout_weight="1" />
+        <Button
+            p1:text="Next"
+            p1:layout_width="wrap_content"
+            p1:layout_height="match_parent"
+            p1:id="@+id/nextBtn"
+            p1:layout_weight="1" />
+       --></LinearLayout><android.webkit.WebView p1:id="@+id/displayedMap" p1:layout_width="match_parent" p1:layout_height="wrap_content" p1:layout_below="@+id/toolbar" p1:layout_above="@+id/linearLayout1" /></RelativeLayout>

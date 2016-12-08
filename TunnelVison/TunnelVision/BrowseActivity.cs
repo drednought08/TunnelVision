@@ -1,29 +1,28 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 using Android.App;
-using Android.Content;
 using Android.OS;
-using Android.Runtime;
 using Android.Views;
-using Android.Widget;
 using Android.Webkit;
 using Android.Support.V7.App;
-using Android.Util;
+using Android.Widget;
 
 namespace TunnelVision
 {
     [Activity(Label = "Tunnel Vision")]
     public class BrowseActivity : AppCompatActivity
     {
+        Button nextBtn;
+        Button prevBtn;
         WebView displayedMap;
         int width;
         string data;
         string mapPrefix = "file:///android_asset/Maps/";
-        string defaultMap = "TestRainbow.png";
+        string defaultMap = "map_MAC1.png";
         string currentMap = "";
+        List<String> mapList;
+        int mapIndex = 0;
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -40,12 +39,41 @@ namespace TunnelVision
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
             SupportActionBar.SetHomeButtonEnabled(true);
 
+            /*
+            FindViewById<Button>(Resource.Id.prevBtn).Click += (sender, e) =>
+            {
+                if (mapList.Count < mapIndex)
+                {
+                    --mapIndex;
+                    ChangeMap(mapList[mapIndex]);
+                }
+            }; ;
+
+            FindViewById<Button>(Resource.Id.nextBtn).Click += (sender, e) =>
+            {
+                if (mapIndex < mapList.Count)
+                {
+                    ++mapIndex;
+                    ChangeMap(mapList[mapIndex]);
+                }
+            };
+            */
+            
             displayedMap = FindViewById<WebView>(Resource.Id.displayedMap);
             displayedMap.SetWebViewClient(new WebViewClient()); // stops request going to Web Browser
 
             SetDisplaySettings();
+
+            //ChangeMap("TestRainbow.png");
+            if (Intent.Extras != null)
+            {
+                ChangeMap(Intent.Extras.GetString("mapName"));
+            }
+            else
+            {
+                ChangeMap(defaultMap);
+            }
             
-            ChangeMap("TestRainbow.png");
         }
 
         //===============================================================================================
@@ -54,6 +82,7 @@ namespace TunnelVision
         {
             displayedMap.Settings.JavaScriptEnabled = true;
             displayedMap.Settings.BuiltInZoomControls = true;
+            displayedMap.Settings.DisplayZoomControls = false;
             displayedMap.Settings.UseWideViewPort = true;
         }
 
@@ -66,12 +95,19 @@ namespace TunnelVision
             data += "<body><center><img src=\"" + mapPrefix + mapName + "\" /></center></body></html>";
 
             //displayedMap.LoadUrl("http://google.com");
-            //displayedMap.LoadUrl(mapPrefix + mapName);
+            displayedMap.LoadUrl(mapPrefix + mapName);
             //displayedMap.LoadUrl("file:///android_asset/Maps/TestRainbow.png");
-            displayedMap.LoadDataWithBaseURL(null, data, "text/html", "utf-8", null);
+            //displayedMap.LoadDataWithBaseURL(null, data, "text/html", "utf-8", null);
             
             currentMap = mapName;
 
+        }
+
+        //===============================================================================================
+
+        public void AddMapToList(string map)
+        {
+            mapList.Add(map);
         }
 
         //===============================================================================================
